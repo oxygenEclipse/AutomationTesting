@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Listeners]">
+  <listeners>
+    <listener class-name="testScripts.Listeners"/>
+  </listeners>
+  <test thread-count="2" name="Listeners(failed)">
+    <classes>
+      <class name="testScripts.DemoQA">
+        <methods>
+          <include name="registrationForm" invocation-numbers="0 0 0 0 1 1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testScripts.DemoQA -->
+    </classes>
+  </test> <!-- Listeners(failed) -->
+</suite> <!-- Failed suite [Listeners] -->

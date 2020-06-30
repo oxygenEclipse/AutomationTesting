@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="347.741511">
+<testcase classname="Automation Practice Login Registration" name="Verify Automation Practice product selection is range specified" time="347.741511">
+<system-out><![CDATA[Given User launches the browser and hit the Automation Practice application.passed
+When User clicks on the Sign In in the Home Page............................passed
+Then User verifies whether the SignIn Page is displayed.....................passed
+When User enters the "automation@abc.com" as username and "1234abc" as password.passed
+And User clicks on the Sign in button in the Sign In Page...................passed
+Then User verifies whether Sign In is successful............................passed
+When User clicks on Women Blouses from the menu.............................passed
+Then User verifies whether the displayed product is in range mentioned in the page.passed
+When User clicks on logout button...........................................passed
+Then User verifies if the user is logout of the application.................passed
+When User closes the browser................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

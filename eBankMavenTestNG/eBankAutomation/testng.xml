@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNGSuite" thread-count="3" parallel="tests">
+<!-- <listeners>
+ <listener class-name="testScripts.Listeners"/>
+</listeners> -->
+
+	<test name="ParallelBrowserChrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testScripts.ParallelBrowserLaunch">
+			</class>
+		</classes>
+	</test>
+
+	<test name="ParallelBrowserIE">
+		<parameter name="browser" value="IE" />
+		<classes>
+			<class name="testScripts.ParallelBrowserLaunch">
+			</class>
+		</classes>
+	</test>
+
+	<test name="ParallelBrowserFireFox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="testScripts.ParallelBrowserLaunch">
+			</class>
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
