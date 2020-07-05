@@ -17,7 +17,7 @@ Feature: Automation Testing HomePage Functionality
     Then Check whether it is navigated to the Home page
     And User verifies whether the Home page has only 3 arrivals
 
-  @HomePageSliders1
+  @HomePageSliders
   Scenario: HomePage - images in Arrivals should navigate
     When User clicks on Shop Menu
     And User clicks on Home menu button
