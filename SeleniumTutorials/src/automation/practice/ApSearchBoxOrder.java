@@ -11,7 +11,7 @@ public class ApSearchBoxOrder extends BaseClass {
 	@FindBy(name = "submit_search")
 	private WebElement submitSearch;
 
-	@FindBy(xpath = "(//a[contains(text(),'Blouse') and @title='Blouse'])[2]")
+	@FindBy(xpath = "//a[contains(text(),'Blouse') and @title='Blouse']")
 	private WebElement selectedProduct;
 
 	public WebElement getSearchQuery() {

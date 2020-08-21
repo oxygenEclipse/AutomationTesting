@@ -45,9 +45,10 @@ public class StepDefinition extends BaseClass {
 	ApSignOutPage signOutPage;
 	ApRegistrationFormPage registerDetails;
 
-/*	@Given("^User launches the browser and hit the Automation Practice application$")
+	@Given("^User launches the browser and hit the Automation Practice application$")
 	public void user_launches_the_browser_and_hit_the_Automation_Practice_application() throws Throwable {
-		driver = browserLaunch("chrome");
+		// driver = browserLaunch("chrome");
+		driver = browserLaunch("browserstack_mobile_web");
 		pageObjectManager = new PageObjectManager(driver);
 		orderPage = pageObjectManager.getOrderPage();
 		getURL(driver, "http://automationpractice.com/index.php");
@@ -129,12 +130,11 @@ public class StepDefinition extends BaseClass {
 		productName = orderPage.getDynamicProductName().getText().trim();
 		Assert.assertTrue(PageTitle(driver).contains(productName + " - My Store"));
 		Assert.assertTrue(isDisplayed(orderPage.getQuantity()));
-		/*
-		 * WebDriverWait wait = new WebDriverWait(driver, 30);
-		 * wait.until(ExpectedConditions.visibilityOf(orderPage.getSizeSelect()));
-		 * Assert.assertTrue(isDisplayed(orderPage.getSizeSelect()));
-		 */
-/*	}
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(orderPage.getSizeSelect()));
+		Assert.assertTrue(isDisplayed(orderPage.getSizeSelect()));
+
+	}
 
 	@When("^User selects the quantity, size and color$")
 	public void user_selects_the_quantity_size_and_color() throws Throwable {
@@ -338,7 +338,7 @@ public class StepDefinition extends BaseClass {
 	@When("^User enters the address details as \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\" and \"([^\"]*)\"$")
 	public void user_enters_the_address_details_as_and(String company, String address, String city, String state,
 			String postalCode, String country) throws Throwable {
-		//ApRegistrationFormPage registerDetails = new ApRegistrationFormPage(driver);
+		// ApRegistrationFormPage registerDetails = new ApRegistrationFormPage(driver);
 		sendValues(registerDetails.getCompanyName(), "clear", company);
 		sendValues(registerDetails.getAddrLine1(), "clear", address);
 		sendValues(registerDetails.getCity(), "clear", city);
@@ -399,6 +399,6 @@ public class StepDefinition extends BaseClass {
 		int compareHigherPrice = Float.compare(productPrice, higherPrice);
 		Assert.assertTrue(((compareLowerPrice > 0 || compareLowerPrice == 0)
 				&& (compareHigherPrice < 0 || compareHigherPrice == 0)));
-	}*/
+	}
 
 }

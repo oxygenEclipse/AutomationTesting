@@ -4,7 +4,13 @@ public class StringOperations {
 	public static void main(String[] args) {
 		String s = "abcd";
 		String t = "abcd";
-	    String str = "";
+		String str1 = "testing";
+		System.out.println("Memory Location : " + System.identityHashCode(str1) + " Value : " + str1);
+		str1 = str1.toUpperCase();
+		String str2 = str1;
+		System.out.println("Memory Location : " + System.identityHashCode(str1) + " Value : " + str1);
+		System.out.println("Memory Location : " + System.identityHashCode(str2) + " Value : " + str2);
+	    /*String str = "";
 		String s1 = new String("abcd");
 		String s2 = new String("uvwx");
 		char[] ch = s2.toCharArray();
@@ -18,7 +24,7 @@ public class StringOperations {
 		System.out.println(System.identityHashCode(s2));
 		System.out.println(s==s1);
 		System.out.println(s.equals(s1));
-		System.out.println(str.isEmpty());
+		System.out.println(str.isEmpty());*/
 	}
 
 }

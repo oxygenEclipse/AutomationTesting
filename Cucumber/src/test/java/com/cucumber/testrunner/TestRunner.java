@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 	@CucumberOptions(
-			features = "src\\test\\resource\\com\\cucumber\\features\\AutomationTest.feature", 
+			features = "src\\test\\resource\\com\\cucumber\\features\\AutomationPractice.feature", 
 			glue = {"helpers","com.cucumber.stepdefinition"}, 
 			dryRun = false, 
 			strict = true, 

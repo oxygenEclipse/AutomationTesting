@@ -39,6 +39,7 @@ public class BaseClass {
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		
 
 		return driver;
 	}

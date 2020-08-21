@@ -1,0 +1,6 @@
+{
+    "fields": {
+        "summary": "Update the summary from RestAssured latest",
+        "description": "Update the description from RestAssured latest"
+    }
+}

@@ -18,9 +18,10 @@ public class UserDefinedSetEmployee {
 			String gender = empInput.nextLine();
 			String sal = empInput.nextLine();
 			employee.add(new Employee(empId, empName, phone, address, dob, doj, email, gender, sal));
-			System.out.println(employee);
+			System.out.println("Enter next Employee Details: ");
 		}
 		empInput.close();
+		System.out.println(employee);
 	}
 }
 class Employee {

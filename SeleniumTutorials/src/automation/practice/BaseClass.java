@@ -1,6 +1,5 @@
 package automation.practice;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -25,8 +24,7 @@ public class BaseClass {
 
 	public static WebDriver browserLaunch(String browserName) throws Exception {
 		if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\Library\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\Banu\\chromedriver_win32_83\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("ie")) {
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\Library\\IEDriverServer.exe");
@@ -102,7 +100,7 @@ public class BaseClass {
 		boolean selected = false;
 		if (check.equalsIgnoreCase("check")) {
 			selected = webElement.isSelected();
-		} 
+		}
 		return selected;
 	}
 
@@ -188,7 +186,7 @@ public class BaseClass {
 		if (clear.equalsIgnoreCase("clear")) {
 			webElement.clear();
 			webElement.sendKeys(value);
-		} 
+		}
 	}
 
 	// SendKeys without clear - Method Overloading
@@ -209,7 +207,7 @@ public class BaseClass {
 				|| (alertType.equalsIgnoreCase("confirm alert") && alertStatus.equalsIgnoreCase("ok")))) {
 			alert.accept();
 		} else if (alertType.equalsIgnoreCase("confirm alert") && alertStatus.equalsIgnoreCase("cancel")) {
-           alert.dismiss();
+			alert.dismiss();
 		}
 		driver.switchTo().defaultContent();
 	}
